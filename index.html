@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arunmozhi M — Data Analyst and Machine Learning Engineer portfolio.">
+<title>Arunmozhi M — Data Analyst | Machine Learning Engineer</title>
+<style>
+:root{
+  --indigo:#6366f1;--violet:#8b5cf6;--pink:#ec4899;--cyan:#06b6d4;--green:#34d399;
+  --bg:#05060d;--bg2:#0b0d18;--bg3:#101321;--text:#edf2f7;--muted:#8b98aa;
+  --line:rgba(255,255,255,.08);--max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--indigo) var(--bg2)}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(5,6,13,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:20px;letter-spacing:-.5px;background:linear-gradient(90deg,#a5b4fc,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.navlinks{display:flex;gap:30px;list-style:none}
+.navlinks a{color:var(--muted);font-size:14px;transition:.2s}
+.navlinks a:hover{color:#fff}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding-top:100px;position:relative;z-index:1}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:800;display:flex;align-items:center;gap:9px}
+.kicker:before{content:"";width:24px;height:2px;background:var(--cyan)}
+.hero h1{font-size:clamp(48px,7vw,82px);line-height:1;letter-spacing:-3.5px;margin:20px 0 18px;background:linear-gradient(120deg,#fff,#a5b4fc,#f0abfc,#67e8f9,#fff);background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:300% center}}
+.hero-sub{font-size:20px;color:var(--muted);max-width:720px}
+.hero-sub b{color:#c4b5fd}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 19px;border-radius:11px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.22s}
+.btn:hover{transform:translateY(-2px);border-color:#59677b}
+.btn.primary{border:0;background:linear-gradient(135deg,var(--indigo),var(--pink));color:#fff;box-shadow:0 15px 40px rgba(99,102,241,.22)}
+.btn.ghost{background:rgba(255,255,255,.035)}
+.hero-visual{position:relative;min-height:410px;display:grid;place-items:center}
+.orb{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.34),transparent 68%);animation:float 6s ease-in-out infinite}
+.ring{position:absolute;border-radius:50%;border:1px dashed rgba(6,182,212,.34);width:300px;height:300px;animation:spin 16s linear infinite}
+.ring.r2{width:370px;height:370px;border-color:rgba(236,72,153,.18);animation-direction:reverse;animation-duration:24s}
+@keyframes float{50%{transform:translateY(-18px) scale(1.04)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.profile-card{position:relative;z-index:2;width:310px;padding:34px;border-radius:25px;background:rgba(12,15,28,.9);border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px rgba(0,0,0,.5);text-align:center;animation:cardfloat 5s ease-in-out infinite}
+@keyframes cardfloat{50%{transform:translateY(-12px)}}
+.avatar{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;margin:auto auto 16px;font-size:27px;font-weight:900;background:linear-gradient(135deg,var(--indigo),var(--pink));box-shadow:0 0 40px rgba(99,102,241,.35)}
+.profile-card h3{font-size:20px}.profile-card .role{font-size:12px;color:var(--cyan);margin:4px 0 22px;letter-spacing:.08em}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:12px;overflow:hidden}
+.stat{background:#090b14;padding:13px 6px}.stat strong{display:block;color:#a5b4fc;font-size:19px}.stat span{display:block;color:var(--muted);font-size:10px;line-height:1.25;margin-top:2px}
+section{position:relative;z-index:1;padding:100px 0}
+section.alt{background:var(--bg2);border-top:1px solid rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03)}
+.section-title{font-size:clamp(31px,4vw,48px);letter-spacing:-1.8px;line-height:1.1;margin:8px 0 42px}
+.section-intro{color:var(--muted);max-width:680px;margin-top:-25px;margin-bottom:35px}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.skill{margin-bottom:21px}.skillhead{display:flex;justify-content:space-between;margin-bottom:7px;font-size:14px}.skillhead span:last-child{color:var(--muted);font-weight:700}
+.track{height:5px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden}.bar{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--indigo),var(--cyan));width:var(--w)}
+.chips-title{margin:40px 0 17px;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);font-size:12px;color:#cbd5e1}
+.timeline{border-left:2px solid rgba(99,102,241,.45);padding-left:30px}
+.job{position:relative;padding:26px;background:var(--bg3);border:1px solid var(--line);border-radius:16px;margin-bottom:22px;transition:.25s}
+.job:hover{transform:translateX(5px);border-color:rgba(99,102,241,.35);box-shadow:0 18px 45px rgba(0,0,0,.22)}
+.job:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;left:-37px;top:32px;background:linear-gradient(135deg,var(--indigo),var(--cyan));border:3px solid var(--bg)}
+.jobtop{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;flex-wrap:wrap}
+.job h3{font-size:19px}.date{font-size:12px;color:var(--cyan);padding:4px 10px;border:1px solid rgba(6,182,212,.2);background:rgba(6,182,212,.08);border-radius:999px}
+.company{color:#a5b4fc;font-weight:700;font-size:14px;margin-top:2px}.location{color:var(--muted);font-size:12px;margin-bottom:12px}.job ul{padding-left:20px;color:#a1adbc;font-size:14px}.job li{margin:4px 0}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.project{background:var(--bg3);border:1px solid var(--line);border-radius:18px;padding:28px;position:relative;overflow:hidden;transition:.25s}
+.project:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,var(--indigo),var(--pink),var(--cyan));transition:.5s}.project:hover:before{left:100%}
+.project:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,.3)}
+.project .num{font-size:12px;color:var(--cyan);font-weight:800;letter-spacing:.14em}.project h3{font-size:20px;margin:8px 0 10px}.project p{color:#9aa7b8;font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:17px 0}.tag{font-size:11px;padding:4px 8px;border-radius:6px;color:#cbd5e1;background:rgba(255,255,255,.045);border:1px solid var(--line)}
+.metric{display:inline-flex;align-items:center;gap:6px;color:#c4b5fd;font-size:12px;font-weight:800;margin-right:15px}.metric b{color:var(--green);font-size:16px}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.edu{background:var(--bg3);border:1px solid var(--line);border-radius:16px;padding:26px}.edu h3{font-size:18px}.edu .inst{color:#a5b4fc;margin:4px 0}.edu .detail{font-size:13px;color:var(--muted)}.cert{margin-top:22px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}.contact-copy p{color:var(--muted);max-width:580px;margin-top:-20px}.contact-list{display:grid;gap:12px}.contact-item{display:flex;gap:14px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:13px;background:var(--bg3);transition:.22s}.contact-item:hover{border-color:rgba(99,102,241,.4);transform:translateX(5px)}.icon{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(99,102,241,.12);font-size:18px}.contact-item small{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em}.contact-item strong{font-size:14px;font-weight:600}
+footer{position:relative;z-index:1;text-align:center;padding:30px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+footer b{color:#a5b4fc}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:110px}.hero-visual{margin-top:20px}.skills-grid,.project-grid,.edu-grid,.contact-grid{grid-template-columns:1fr}.navlinks{display:none}section{padding:75px 0}}
+@media(max-width:560px){.container{width:min(calc(100% - 28px),var(--max))}.hero h1{font-size:48px}.profile-card{width:280px}.hero-visual{min-height:350px}.ring{width:260px;height:260px}.ring.r2{width:320px;height:320px}.orb{width:290px;height:290px}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#home">AM.</a>
+    <ul class="navlinks">
+      <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container" style="display:contents">
+    <div>
+      <div class="kicker">Data • ML • Business Intelligence</div>
+      <h1>Arunmozhi M</h1>
+      <p class="hero-sub"><b>Data Analyst | Machine Learning Engineer</b><br>Building data-driven solutions with Python, SQL, Machine Learning, Power BI and modern analytics tools.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View Projects →</a>
+        <a class="btn ghost" href="#contact">Contact Me</a>
+        <a class="btn ghost" href="https://github.com/Arunmozhi1997" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arunmozhi-muthu-65a29037b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orb"></div><div class="ring"></div><div class="ring r2"></div>
+      <div class="profile-card">
+        <div class="avatar">AM</div>
+        <h3>Arunmozhi M</h3>
+        <div class="role">DATA ANALYST · ML ENGINEER</div>
+        <div class="stats">
+          <div class="stat"><strong>90%</strong><span>Banking model accuracy</span></div>
+          <div class="stat"><strong>50+</strong><span>Financial KPIs</span></div>
+          <div class="stat"><strong>40</strong><span>Funds analyzed</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="about">
+<div class="container">
+  <div class="kicker">About Me</div>
+  <h2 class="section-title">Data, analytics & practical problem solving.</h2>
+  <p class="section-intro">Data Analyst with hands-on experience in Data Science, Machine Learning, and Business Intelligence through real-world projects and a Bluestock Fintech internship. Proficient in Python, SQL, Power BI, Scikit-learn, Pandas, and NumPy, with experience in exploratory data analysis, ETL pipelines, predictive modeling, recommendation systems, and financial analytics.</p>
+  <div class="chips">
+    <span class="chip">Exploratory Data Analysis</span><span class="chip">ETL Pipelines</span><span class="chip">Predictive Modeling</span>
+    <span class="chip">Recommendation Systems</span><span class="chip">Financial Analytics</span><span class="chip">Business Intelligence</span>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+  <div class="kicker">Expertise</div><h2 class="section-title">Technical Skills</h2>
+  <div class="skills-grid">
+    <div>
+      <div class="skill"><div class="skillhead"><span>Python</span><span>95%</span></div><div class="track"><div class="bar" style="--w:95%"></div></div></div>
+      <div class="skill"><div class="skillhead"><span>SQL</span><span>90%</span></div><div class="track"><div class="bar" style="--w:90%;background:linear-gradient(90deg,var(--pink),#f9a8d4)"></div></div></div>
+      <div class="skill"><div class="skillhead"><span>Machine Learning</span><span>88%</span></div><div class="track"><div class="bar" style="--w:88%;background:linear-gradient(90deg,var(--cyan),#67e8f9)"></div></div></div>
+      <div class="skill"><div class="skillhead"><span>Pandas / NumPy</span><span>92%</span></div><div class="track"><div class="bar" style="--w:92%;background:linear-gradient(90deg,var(--green),#86efac)"></div></div></div>
+    </div>
+    <div>
+      <div class="skill"><div class="skillhead"><span>Scikit-learn</span><span>88%</span></div><div class="track"><div class="bar" style="--w:88%"></div></div></div>
+      <div class="skill"><div class="skillhead"><span>Power BI</span><span>85%</span></div><div class="track"><div class="bar" style="--w:85%;background:linear-gradient(90deg,var(--pink),#f9a8d4)"></div></div></div>
+      <div class="skill"><div class="skillhead"><span>EDA & Data Analytics</span><span>92%</span></div><div class="track"><div class="bar" style="--w:92%;background:linear-gradient(90deg,var(--cyan),#67e8f9)"></div></div></div>
+      <div class="skill"><div class="skillhead"><span>Git / GitHub</span><span>82%</span></div><div class="track"><div class="bar" style="--w:82%;background:linear-gradient(90deg,var(--green),#86efac)"></div></div></div>
+    </div>
+  </div>
+  <div class="chips-title">Tools & Technologies</div>
+  <div class="chips">
+    <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Scikit-learn</span>
+    <span class="chip">XGBoost</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLite</span><span class="chip">Power BI</span>
+    <span class="chip">Streamlit</span><span class="chip">Plotly</span><span class="chip">Selenium</span><span class="chip">NLTK</span><span class="chip">TF-IDF</span>
+    <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">EDA</span><span class="chip">ETL</span>
+  </div>
+</div>
+</section>
+
+<section class="alt" id="experience">
+<div class="container">
+  <div class="kicker">Career</div><h2 class="section-title">Work Experience</h2>
+  <div class="timeline">
+    <article class="job">
+      <div class="jobtop"><h3>Data Analyst Intern</h3><span class="date">Jun 2026 – Present</span></div>
+      <div class="company">Bluestock Fintech</div><div class="location">Remote</div>
+      <ul><li>Working on real-world fintech data analytics and business intelligence workflows.</li><li>Applying Python, SQL, analytics and dashboarding skills to data-driven tasks.</li></ul>
+    </article>
+    <article class="job">
+      <div class="jobtop"><h3>Store Administrator</h3><span class="date">Jul 2024 – May 2025</span></div>
+      <div class="company">Hotel Florence</div><div class="location">Yerevan, Armenia</div>
+      <ul><li>Managed inventory, billing, and vendor coordination using structured data systems.</li><li>Analyzed consumption patterns to optimize stock levels and reduce waste.</li><li>Monitored inventory, ensured audit compliance, and improved stock-tracking processes.</li></ul>
+    </article>
+    <article class="job">
+      <div class="jobtop"><h3>Line In-Charge — Finishing Goods</h3><span class="date">Jul 2021 – May 2023</span></div>
+      <div class="company">APTIV</div><div class="location">Chennai, Tamil Nadu, India</div>
+      <ul><li>Monitored production and dispatch data to ensure timely delivery of finished goods.</li><li>Maintained accurate records of orders, invoices, and inventory; identified process inefficiencies.</li><li>Managed dispatch planning, finished-goods inventory, and shipment coordination across teams.</li></ul>
+    </article>
+    <article class="job">
+      <div class="jobtop"><h3>Quality Control Engineering Technician</h3><span class="date">Apr 2020 – Jun 2021</span></div>
+      <div class="company">LGB</div><div class="location">Coimbatore, Tamil Nadu, India</div>
+      <ul><li>Conducted quality inspections and testing to ensure product compliance with quality standards.</li><li>Documented inspection results and maintained accurate records for traceability.</li><li>Collaborated with production teams to identify defects, reduce error rates, and improve quality processes.</li></ul>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+  <div class="kicker">Portfolio</div><h2 class="section-title">Featured Projects</h2>
+  <div class="project-grid">
+    <article class="project">
+      <div class="num">01 · MACHINE LEARNING</div><h3>AI-Powered Banking Product Recommendation System</h3>
+      <p>Built an end-to-end recommendation system using EDA and feature engineering, with real-time FastAPI APIs and interactive Power BI / Streamlit dashboards for business insights.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Power BI</span><span class="tag">Streamlit</span></div>
+      <span class="metric"><b>90%</b> prediction accuracy</span>
+    </article>
+    <article class="project">
+      <div class="num">02 · NLP</div><h3>IMDb 2024 Movie Recommendation System</h3>
+      <p>Built an NLP recommendation system with automated data scraping and cleaning. Implemented TF-IDF vectorization and cosine similarity, then deployed it through an interactive Streamlit app.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">NLTK</span><span class="tag">TF-IDF</span><span class="tag">Scikit-learn</span><span class="tag">Streamlit</span></div>
+      <span class="metric"><b>NLP</b> content-based recommendation</span>
+    </article>
+    <article class="project">
+      <div class="num">03 · FINANCIAL ANALYTICS</div><h3>Mutual Fund Analytics & Performance Intelligence Platform</h3>
+      <p>Built an ETL pipeline and star-schema database calculating CAGR, Sharpe, Alpha, Beta, VaR and Max Drawdown. Created dashboards for fund performance, SIP trends and investor analytics.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">Power BI</span><span class="tag">Streamlit</span></div>
+      <span class="metric"><b>40</b> schemes analyzed</span>
+    </article>
+    <article class="project">
+      <div class="num">04 · STOCK INTELLIGENCE</div><h3>Nifty 100 Financial Analytics & Stock Intelligence Platform</h3>
+      <p>Built a financial ETL pipeline computing 50+ KPIs including ROE, ROCE, CAGR, FCF and D/E for stock screening and valuation. Created an 8-page Streamlit + Plotly dashboard.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Financial KPIs</span></div>
+      <span class="metric"><b>50+</b> KPIs · <b>8-page</b> dashboard</span>
+    </article>
+  </div>
+</div>
+</section>
+
+<section class="alt" id="education">
+<div class="container">
+  <div class="kicker">Background</div><h2 class="section-title">Education & Certification</h2>
+  <div class="edu-grid">
+    <article class="edu"><h3>Bachelor of Engineering (B.E.)</h3><div class="inst">A.R.J. College of Engineering & Technology</div><div class="detail">Mechanical Engineering · 2019<br>Mannargudi, Tamil Nadu, India</div></article>
+    <article class="edu"><h3>Higher Secondary Certificate (HSC)</h3><div class="inst">St. Marcinas Matric Higher Secondary School</div><div class="detail">Mathematics with Computer Science · 2015<br>Ammapet, Thanjavur, Tamil Nadu, India</div></article>
+  </div>
+  <div class="edu cert"><h3>Master Data Science Program</h3><div class="inst">HCL GUVI</div><div class="detail">Professional certification / program</div></div>
+  <div class="chips-title">Languages</div><div class="chips"><span class="chip">English</span><span class="chip">Tamil</span></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="contact-grid">
+    <div class="contact-copy">
+      <div class="kicker">Get in Touch</div><h2 class="section-title">Let's connect.</h2>
+      <p>For opportunities, collaborations, analytics projects, or machine-learning work, you can reach me through the contact details below.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:arunmozhi776@gmail.com">Email Me →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arunmozhi-muthu-65a29037b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="contact-list">
+      <a class="contact-item" href="mailto:arunmozhi776@gmail.com"><span class="icon">✉</span><div><small>Email</small><strong>arunmozhi776@gmail.com</strong></div></a>
+      <a class="contact-item" href="tel:+916383461398"><span class="icon">☎</span><div><small>Phone</small><strong>+91 6383463198</strong></div></a>
+      <div class="contact-item"><span class="icon">⌖</span><div><small>Location</small><strong>Thanjavur, Tamil Nadu, India — 614402</strong></div></div>
+      <a class="contact-item" href="https://www.linkedin.com/in/arunmozhi-muthu-65a29037b/" target="_blank" rel="noopener"><span class="icon">in</span><div><small>LinkedIn</small><strong>linkedin.com/in/arunmozhi-muthu-65a29037b/</strong></div></a>
+      <a class="contact-item" href="https://github.com/Arunmozhi1997" target="_blank" rel="noopener"><span class="icon">⌘</span><div><small>GitHub</small><strong>github.com/Arunmozhi1997</strong></div></a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 <b>Arunmozhi M</b> · Data Analyst | Machine Learning Engineer · Thanjavur, Tamil Nadu, India</footer>
+
+<script>
+const c=document.getElementById('particles'),ctx=c.getContext('2d');let W,H,pts=[];
+function resize(){W=c.width=innerWidth;H=c.height=innerHeight}resize();addEventListener('resize',resize);
+function P(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.r=Math.random()*1.5+.5}
+for(let i=0;i<65;i++)pts.push(new P());
+function draw(){ctx.clearRect(0,0,W,H);for(let i=0;i<pts.length;i++){let p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(129,140,248,.55)';ctx.fill();for(let j=i+1;j<pts.length;j++){let q=pts[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle='rgba(6,182,212,'+((1-d/120)*.12)+')';ctx.lineWidth=.6;ctx.stroke()}}}requestAnimationFrame(draw)}draw();
+</script>
+</body>
+</html>
